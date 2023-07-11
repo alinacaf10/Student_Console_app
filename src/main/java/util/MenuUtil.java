@@ -4,19 +4,25 @@
  */
 package util;
 
+import java.util.Scanner;
+
 /**
  *
  * @author HP
  */
 public class MenuUtil {
-    
-    public static void showMenu(){
-        Menu[] menu=Menu.values();
-        for (int i = 0; i < menu.length; i++) {
-            System.out.println(menu[i]);
-        }
+
+    public static Menu showMenu() {
+        Menu.showAllMenu();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter operation number");
+        int number = sc.nextInt();
+
+       return Menu.find(number);
+
     }
-    public static void proccessMenu(Menu menu){
+
+    public static void proccessMenu(Menu menu) {
         menu.proccess();
     }
 }
