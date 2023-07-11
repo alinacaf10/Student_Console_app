@@ -4,6 +4,7 @@
  */
 package service;
 
+import bean.Config;
 import java.util.Scanner;
 import service.inter.LoginInter;
 
@@ -27,6 +28,8 @@ public class MenuLoginService implements LoginInter {
         if (!(username.equals("user") && password.equals("1111"))) {
             throw new IllegalArgumentException("user or password is invalid");
         }
+        Config.setLoggedin(true);
     }
+    
 
 }

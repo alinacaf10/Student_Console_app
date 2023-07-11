@@ -14,6 +14,23 @@ public class Config implements Serializable{
     private static Config config=null;
     private Student[] student=new Student[0];
     private Teacher[] teacher=new Teacher[0];
+    private static boolean loggedin;
+
+    public static Config getConfig() {
+        return config;
+    }
+
+    public static void setConfig(Config config) {
+        Config.config = config;
+    }
+
+    public static boolean isLoggedin() {
+        return loggedin;
+    }
+
+    public static void setLoggedin(boolean loggedin) {
+        Config.loggedin = loggedin;
+    }
 
     public Student[] getStudent() {
         return student;

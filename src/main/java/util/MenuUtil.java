@@ -12,13 +12,15 @@ import java.util.Scanner;
  */
 public class MenuUtil {
 
-    public static Menu showMenu() {
+    public static void showMenu() {
         Menu.showAllMenu();
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter operation number");
         int number = sc.nextInt();
 
-       return Menu.find(number);
+       Menu selected = Menu.find(number);
+       selected.proccess();
+
 
     }
 

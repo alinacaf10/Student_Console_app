@@ -22,6 +22,11 @@ public abstract class Person {
      Person() {
     }
 
+    @Override
+    public String toString() {
+        return "" + "name=" + name + ", surname=" + surname + ", age=" + age + '}';
+    }
+
     public String getName() {
         return name;
     }

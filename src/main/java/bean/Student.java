@@ -27,5 +27,7 @@ public class Student extends Person {
     public void setSalary(double salary) {
         this.salary = salary;
     }
+
+   
     
 }
