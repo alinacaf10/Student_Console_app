@@ -4,11 +4,14 @@
  */
 package service;
 
+import service.inter.MenuService;
+import service.inter.RegisterInter;
+
 /**
  *
  * @author HP
  */
-public class MenuRegisterService extends MenuService {
+public class MenuRegisterService implements RegisterInter {
 
     @Override
     public void proccess() {

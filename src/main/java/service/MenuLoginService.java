@@ -4,15 +4,29 @@
  */
 package service;
 
+import java.util.Scanner;
+import service.inter.LoginInter;
+
 /**
  *
  * @author HP
  */
-public class MenuLoginService extends MenuService {
+public class MenuLoginService implements LoginInter {
 
     @Override
     public void proccess() {
-        System.out.println("Login");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Username: ");
+        String username = sc.nextLine();
+
+        Scanner sc2 = new Scanner(System.in);
+        System.out.println("Password: ");
+
+        String password = sc2.nextLine();
+
+        if (!(username.equals("user") && password.equals("1111"))) {
+            throw new IllegalArgumentException("user or password is invalid");
+        }
     }
-    
+
 }

@@ -7,7 +7,7 @@ package util;
 import java.util.Scanner;
 import service.MenuLoginService;
 import service.MenuRegisterService;
-import service.MenuService;
+import service.inter.MenuService;
 
 /**
  *
