@@ -8,6 +8,7 @@ import bean.Config;
 import bean.Student;
 import java.util.Scanner;
 import service.inter.AddStudentInter;
+import util.FileUtility;
 
 /**
  *
@@ -44,6 +45,8 @@ public class AddStudentsService implements AddStudentInter {
         s.setSalary(salary);
         s.setSchoolName(schoolname);
         
-        Config.instance().appendStudent(s);   }
+        Config.instance().appendStudent(s); 
+        Config.save();
+    }
     
 }

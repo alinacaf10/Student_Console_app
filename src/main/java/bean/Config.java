@@ -5,6 +5,7 @@
 package bean;
 
 import java.io.Serializable;
+import util.FileUtility;
 
 /**
  *
@@ -12,6 +13,21 @@ import java.io.Serializable;
  */
 public class Config implements Serializable{
     private static Config config=null;
+
+    public static void initialize() {
+        Object obj =FileUtility.readFile("application.obj");
+        if (obj==null) {
+            return ;
+        }
+        if (obj instanceof Config) {
+            config=(Config) obj;
+            
+        }
+    }
+    public static void save(){
+                FileUtility.writeObjectToFile(Config.instance(), "application.obj");
+
+    }
     private Student[] student=new Student[0];
     private Teacher[] teacher=new Teacher[0];
     private static boolean loggedin;
